@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import { ThemeProvider } from "./components/theme-provider";
 import { TooltipProvider } from "./components/ui/tooltip";
 import Projects from "./components/Projects";
+import Github from "./components/Github";
 import DiagonalPattern from "./components/DiagonalPattern";
 import Navbar from "./components/Navbar";
 
@@ -24,6 +25,7 @@ const App: React.FC = () => {
 
               <Hero />
               <Projects />
+              <Github />
           
         </div>
         </div>
