@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {GitHubCalendar} from "react-github-calendar";
 import { motion } from "framer-motion";
-import { useTheme } from "../theme-provider";
+import { useTheme } from "../../hooks/useTheme";
 
 interface GitHubContributionsProps {
   username: string;
@@ -18,21 +18,33 @@ const GitHubContributions: React.FC<GitHubContributionsProps> = ({
   const [resolvedTheme, setResolvedTheme] = useState<"light" | "dark">("dark");
 
   useEffect(() => {
-    // Resolve the actual theme (handle "system" theme)
-    const root = window.document.documentElement;
-    
-    if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-      setResolvedTheme(systemTheme);
-    } else {
-      setResolvedTheme(theme as "light" | "dark");
-    }
+    // Function to get the actual resolved theme
+    const getResolvedTheme = (): "light" | "dark" => {
+      const root = window.document.documentElement;
+      
+      if (theme === "system") {
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+        return systemTheme;
+      }
+      
+      // For explicit light/dark theme, use that
+      return theme as "light" | "dark";
+    };
 
-    // Also check the actual class on the root element as fallback
-    const isDark = root.classList.contains("dark");
-    setResolvedTheme(isDark ? "dark" : "light");
+    setResolvedTheme(getResolvedTheme()); // Set initial theme
+
+    // Listen for system theme changes when theme is set to "system"
+    if (theme === "system") {
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      const handler = (e: MediaQueryListEvent) => {
+        setResolvedTheme(e.matches ? "dark" : "light");
+      };
+      
+      mediaQuery.addEventListener("change", handler);
+      return () => mediaQuery.removeEventListener("change", handler);
+    }
   }, [theme]);
 
   // Dynamic theme based on resolved theme

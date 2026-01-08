@@ -25,6 +25,7 @@ import {
 
 // lucide-react
 import { Boxes, Cloud } from "lucide-react";
+import SectionHeading from "./SectionHeading";
 
 /* -------------------- Types -------------------- */
 
@@ -86,9 +87,7 @@ const TechStackMarquee: React.FC = () => {
         <div className="px-4">
           {/* Title */}
           <div className="mb-4">
-            <h2 className="text-base sm:text-xl opacity-20 font-[family-name:var(--font-instrument-serif)]">
-              Stack I use
-            </h2>
+            <SectionHeading subHeading="Known" heading="Tech Stack" />
             <p className="text-sm sm:text-base text-muted-foreground">
               Technologies I work with to build products that solve real problems
             </p>

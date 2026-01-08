@@ -3,7 +3,7 @@ import React from "react";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 
-import { ThemeProvider } from "./components/theme-provider";
+import { ThemeProvider } from "./hooks/useTheme";
 import { TooltipProvider } from "./components/ui/tooltip";
 import Projects from "./components/Projects";
 import DiagonalPattern from "./components/DiagonalPattern";
