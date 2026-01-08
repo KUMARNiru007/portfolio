@@ -9,6 +9,7 @@ import Projects from "./components/Projects";
 import Github from "./components/Github";
 import DiagonalPattern from "./components/DiagonalPattern";
 import Navbar from "./components/Navbar";
+import TechStackMarquee from "./components/TechStackMarquee";
 
 const App: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const App: React.FC = () => {
             <DiagonalPattern side="right" />
 
               <Hero />
+              <TechStackMarquee />
               <Projects />
               <Github />
           

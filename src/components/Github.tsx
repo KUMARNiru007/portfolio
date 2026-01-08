@@ -6,6 +6,7 @@ import { githubConfig } from "../config/Github";
 import Container from "./Container";
 import { Button } from "./ui/button";
 import { useTheme } from "../hooks/useTheme";
+import SectionHeading from "./SectionHeading";
 
 /* -------------------- Types -------------------- */
 
@@ -86,6 +87,7 @@ const Github: React.FC = () => {
 
   return (
     <Container className="mt-20">
+    <SectionHeading subHeading="Featured" heading="" />
       <div className="space-y-6">
         {/* Header */}
         <div>
