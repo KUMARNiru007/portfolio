@@ -6,10 +6,10 @@ import Footer from "./components/Footer";
 import { ThemeProvider } from "./components/theme-provider";
 import { TooltipProvider } from "./components/ui/tooltip";
 import Projects from "./components/Projects";
-import Github from "./components/Github";
 import DiagonalPattern from "./components/DiagonalPattern";
 import Navbar from "./components/Navbar";
 import TechStackMarquee from "./components/TechStackMarquee";
+import ContributionsDisplay  from "./components/github/ContributionsDisplay";
 
 const App: React.FC = () => {
   return (
@@ -27,7 +27,7 @@ const App: React.FC = () => {
               <Hero />
               <TechStackMarquee />
               <Projects />
-              <Github />
+              <ContributionsDisplay username="KUMARNiru007" />
           
         </div>
         </div>
