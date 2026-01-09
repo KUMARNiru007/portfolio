@@ -50,7 +50,7 @@ const ExperienceContent: React.FC = () => {
     <Reveal delay={0.1}>
       <div className="sm:px-12 py-2">
         {/* Section Heading */}
-        <h2 className="text-base sm:text-xl mb-3 opacity-20 mt-4 sm:mt-6 px-4 font-[family-name:var(--font-instrument-serif)]">
+        <h2 className="text-base sm:text-xl mb-3 opacity-20 mt-4 sm:mt-6 px-4">
           Professional Experience
         </h2>
 

@@ -1,7 +1,6 @@
 import React from "react";
 import Reveal from "../../components/Reveal";
 import GitHubContributions from "./GitHubContributions";
-import { Container } from "lucide-react";
 import SectionHeading from "../SectionHeading";
 
 interface ContributionsDisplayProps {

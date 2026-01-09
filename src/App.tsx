@@ -13,6 +13,8 @@ import ContributionsDisplay  from "./components/github/ContributionsDisplay";
 import Reveal from "./components/Reveal";
 import SectionBorder from "./components/SectionBorder";
 import ExperienceContent from "./components/ExperienceContent";
+import { BlogList } from "./components/blogs/BlogList";
+import { blogs } from "./config/blogs";
 // import { VisitorCount } from "./components/VisitorCount";
 
 const App: React.FC = () => {
@@ -50,6 +52,12 @@ const App: React.FC = () => {
               <Projects />
 
               <Reveal delay={0.05}>
+                <SectionBorder className="mt-6" />
+              </Reveal>
+
+               <BlogList blogs={blogs} />
+
+               <Reveal delay={0.05}>
                 <SectionBorder className="mt-6" />
               </Reveal>
               
