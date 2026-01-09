@@ -10,6 +10,10 @@ import DiagonalPattern from "./components/DiagonalPattern";
 import Navbar from "./components/Navbar";
 import TechStackMarquee from "./components/TechStackMarquee";
 import ContributionsDisplay  from "./components/github/ContributionsDisplay";
+import Reveal from "./components/Reveal";
+import SectionBorder from "./components/SectionBorder";
+import ExperienceContent from "./components/ExperienceContent";
+// import { VisitorCount } from "./components/VisitorCount";
 
 const App: React.FC = () => {
   return (
@@ -25,9 +29,38 @@ const App: React.FC = () => {
             <DiagonalPattern side="right" />
 
               <Hero />
+
+              <Reveal delay={0.05}>
+                <SectionBorder className="mt-6" />
+              </Reveal>
+
+              <ExperienceContent />
+
+              <Reveal delay={0.05}>
+                <SectionBorder className="mt-6" />
+              </Reveal>
+
+
               <TechStackMarquee />
+
+              <Reveal delay={0.05}>
+                <SectionBorder className="mt-6" />
+              </Reveal>
+
               <Projects />
+
+              <Reveal delay={0.05}>
+                <SectionBorder className="mt-6" />
+              </Reveal>
+              
               <ContributionsDisplay username="KUMARNiru007" />
+
+              <Reveal delay={0.05}>
+                <SectionBorder className="mt-6" />
+              </Reveal>
+
+              {/* <VisitorCount className="text-xs text-muted-foreground" /> */}
+
           
         </div>
         </div>

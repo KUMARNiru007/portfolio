@@ -55,13 +55,6 @@ const Hero: React.FC = () => {
                 </ContentSection>
               </Reveal>
 
-              <Reveal delay={0.05}>
-                <SectionBorder className="mt-6" />
-              </Reveal>
-
-              <Reveal delay={0.05}>
-                <SectionBorder className="mt-4" />
-              </Reveal>
             </div>
           </div>
         </div>
