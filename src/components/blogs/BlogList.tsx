@@ -2,6 +2,7 @@ import type { BlogPost } from '../../types/blog';
 import Container from '../Container';
 import Reveal from '../Reveal';
 import SectionHeading from '../SectionHeading';
+import { Button } from '../ui/button';
 import { BlogCard } from './BlogCard';
 
 interface BlogListProps {
@@ -36,6 +37,11 @@ export function BlogList({
         <BlogCard key={blog.id} blog={blog} />
       ))}
     </div>
+    <div className="mt-8 flex justify-center">
+        <Button variant="outline">
+          <a href="/Blogs">Show all Blogs</a>
+        </Button>
+      </div>
     </div>
     </Container>
     

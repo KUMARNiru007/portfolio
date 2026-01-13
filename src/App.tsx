@@ -1,7 +1,6 @@
 import React from "react";
 
 import Hero from "./components/Hero";
-import Footer from "./components/Footer";
 
 import { ThemeProvider } from "./hooks/useTheme";
 import { TooltipProvider } from "./components/ui/tooltip";
@@ -15,12 +14,17 @@ import SectionBorder from "./components/SectionBorder";
 import ExperienceContent from "./components/ExperienceContent";
 import { BlogList } from "./components/blogs/BlogList";
 import { blogs } from "./config/blogs";
+import CTA from "./components/CTA";
+import ReactLenis from 'lenis/react';
+import Footer from "./components/Footer";
 // import { VisitorCount } from "./components/VisitorCount";
 
 const App: React.FC = () => {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <TooltipProvider>
+
+        <ReactLenis root>
           <div className="min-h-screen transition-colors duration-300 relative"
             style={{ fontFamily: "var(--font-hk-grotesk)" }}>
               {<Navbar />}
@@ -55,26 +59,30 @@ const App: React.FC = () => {
                 <SectionBorder className="mt-6" />
               </Reveal>
 
-               <BlogList blogs={blogs} />
+              <ContributionsDisplay username="KUMARNiru007" />
 
                <Reveal delay={0.05}>
                 <SectionBorder className="mt-6" />
               </Reveal>
               
-              <ContributionsDisplay username="KUMARNiru007" />
+               <BlogList blogs={blogs} />
 
               <Reveal delay={0.05}>
                 <SectionBorder className="mt-6" />
               </Reveal>
 
-              {/* <VisitorCount className="text-xs text-muted-foreground" /> */}
+             <CTA />
+
+             <Footer />
+              
 
           
         </div>
         </div>
-              <Footer />
+        </ReactLenis>
       </TooltipProvider>
     </ThemeProvider>
+
   );
 };
 
