@@ -25,16 +25,6 @@ const Hero: React.FC = () => {
           {/* Content */}
           <div className="prose dark:prose-invert max-w-none">
             <div className="text-base">
-              {/* Current Role */}
-              <Reveal delay={0.1}>
-                <ContentSection
-                  subtitle="AI Engineer | Full-stack Developer"
-                  className="mt-6"
-                >
-                  <div />
-                </ContentSection>
-              </Reveal>
-
               <Reveal delay={0.05}>
                 <SectionBorder className="mt-6" />
               </Reveal>

@@ -95,7 +95,7 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
       {/* Avatar */}
       <div className="flex items-center justify-between mb-4 sm:mx-8 mx-4">
         <div
-          className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-cover bg-center"
+          className="w-24 h-24 sm:w-30 sm:h-30  bg-cover bg-center rounded-2xl "
           role="img"
           aria-label={name}
           style={{ backgroundImage: `url("${profileImage}")` }}
