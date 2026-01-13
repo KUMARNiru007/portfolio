@@ -26,15 +26,19 @@ export function BlogList({
     <Reveal delay={0.1}>
       <Container className="mt-8">
         {/* Section Heading */}
+        <div className="text-base sm:text-xl leading-relaxed -tracking-[0.01em] mb-4 px-4">
         <SectionHeading subHeading="Featured" heading="Blogs" />
         <div className="text-base sm:text-xl leading-relaxed -tracking-[0.01em] mb-4 px-4">
         </div>
+        
        <div className="mb-4 sm:mb-6">
       {blogs.map((blog) => (
         <BlogCard key={blog.id} blog={blog} />
       ))}
     </div>
+    </div>
     </Container>
+    
     </Reveal>
   );
 }

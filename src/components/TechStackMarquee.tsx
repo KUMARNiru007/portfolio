@@ -87,6 +87,8 @@ const TechStackMarquee: React.FC = () => {
         <div className="px-4">
           {/* Title */}
           <div className="mb-4">
+            {/* Section Heading */}
+        <div className="text-base sm:text-xl leading-relaxed -tracking-[0.01em] mb-4 px-4">
             <SectionHeading subHeading="Known" heading="Tech Stack" />
             <p className="text-sm sm:text-base text-muted-foreground">
               Technologies I work with to build products that solve real problems
@@ -104,6 +106,7 @@ const TechStackMarquee: React.FC = () => {
             {/* Fade edges */}
             <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-background to-transparent" />
             <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-background to-transparent" />
+          </div>
           </div>
         </div>
       </div>

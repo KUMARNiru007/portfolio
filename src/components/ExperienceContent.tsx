@@ -50,6 +50,7 @@ const ExperienceContent: React.FC = () => {
     <Reveal delay={0.1}>
       <div className="sm:px-12 py-2">
         {/* Section Heading */}
+        <div className="text-base sm:text-xl leading-relaxed -tracking-[0.01em] mb-4 px-4">
         <h2 className="text-base sm:text-xl mb-3 opacity-20 mt-4 sm:mt-6 px-4">
           Professional Experience
         </h2>
@@ -156,6 +157,7 @@ const ExperienceContent: React.FC = () => {
               </div>
             );
           })}
+        </div>
         </div>
       </div>
     </Reveal>
