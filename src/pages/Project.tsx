@@ -2,9 +2,26 @@ import SectionBorder from '@/components/SectionBorder';
 import Container from '../components/Container';
 import  ProjectList  from '../components/projects/ProjectList';
 import { projects } from '@/config/Projects';
+import { ThemeProvider } from '@/hooks/useTheme';
+import { TooltipProvider } from '@/components/ui/tooltip';
+import ReactLenis from 'lenis/react';
+import Navbar from '@/components/Navbar';
+import DiagonalPattern from '@/components/DiagonalPattern';
 
-export default function ProjectsPage() {
+ function ProjectsPage() {
   return (
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <TooltipProvider>
+
+        <ReactLenis root>
+          <div className="min-h-screen transition-colors duration-300 relative"
+            style={{ fontFamily: "var(--font-hk-grotesk)" }}>
+              {<Navbar />}
+           <div className="relative mx-auto max-w-4xl">
+
+            {/* Diagonal Patterns */}
+            <DiagonalPattern side="left" />
+            <DiagonalPattern side="right" />
     <Container className="py-16">
       <div className="space-y-8">
         {/* Header */}
@@ -37,5 +54,11 @@ export default function ProjectsPage() {
         </div>
       </div>
     </Container>
+    </div>
+                </div>
+              </ReactLenis>
+        </TooltipProvider>      
+    </ThemeProvider>
   );
 }
+export default ProjectsPage;

@@ -3,12 +3,14 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import ProjectsPage from "./pages/project";
+import BlogPage from "./pages/Blog";
 
 const App: React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/project" element={<ProjectsPage />} />
+      <Route path="/projects" element={<ProjectsPage />} />
+      <Route path="/blogs" element={<BlogPage />} />
     </Routes>
   );
 };

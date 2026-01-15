@@ -39,7 +39,7 @@ export function BlogList({
     </div>
     <div className="mt-8 flex justify-center">
         <Button variant="outline">
-          <a href="/Blogs">Show all Blogs</a>
+          <a href="/blogs">Show all Blogs</a>
         </Button>
       </div>
     </div>

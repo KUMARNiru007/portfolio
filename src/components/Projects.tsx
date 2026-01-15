@@ -6,7 +6,6 @@ import SectionHeading from "../components/SectionHeading";
 import  ProjectList  from "../components/projects/ProjectList.tsx";
 import { Button } from "../components/ui/button";
 import Reveal from "./Reveal.tsx";
-import { Link } from "lucide-react";
 
 const Projects: React.FC = () => {
   const featuredProjects = projects.slice(0, 4);
@@ -22,11 +21,7 @@ const Projects: React.FC = () => {
 
       <div className="mt-8 flex justify-center">
         <Button variant="outline">
-          <Link
-          to="/project"
-          >
-          Show all Projects
-          </Link>
+          <a href="/projects">Show all projects</a>
         </Button>
       </div>
       </div>
