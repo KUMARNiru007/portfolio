@@ -8,7 +8,7 @@ const BannerSection = () => {
         <img
           src={bannerImage}
           alt="Banner"
-          className="w-full h-[200px] sm:h-[270px] object-cover opacity-70"
+          className="w-full h-[200px] sm:h-[270px] object-cover "
           style={{ minHeight: "100px" }}
         />
 

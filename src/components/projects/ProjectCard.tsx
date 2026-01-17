@@ -108,7 +108,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             {project.technologies.map((tech) => (
               <Tooltip key={tech.name}>
                 <TooltipTrigger>
-                  <div className="size-6 hover:scale-125 transition">
+                  <div
+                     className={`size-6 transition hover:scale-125 ${
+                     tech.color ?? "text-secondary"
+                     }`}
+                  >
                     {tech.icon}
                   </div>
                 </TooltipTrigger>

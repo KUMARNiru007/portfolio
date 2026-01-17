@@ -2,65 +2,49 @@ import React from "react";
 import Reveal from "../components/Reveal";
 import { Marquee } from "../components/ui/marquee";
 
-// react-icons (brand icons)
-import {
-  FaJs,
-  FaJava,
-  FaPython,
-  FaReact,
-  FaNodeJs,
-  FaDocker,
-  FaGitAlt,
-  FaAws,
-} from "react-icons/fa";
-import {
-  SiTypescript,
-  SiMongodb,
-  SiPostgresql,
-  SiRedis,
-  SiTailwindcss,
-  SiExpress,
-  SiGooglecloud,
-} from "react-icons/si";
-
-// lucide-react
-import { Boxes, Cloud } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import Container from "./Container";
-import { FaRegFloppyDisk } from "react-icons/fa6";
 
 /* -------------------- Types -------------------- */
 
 type Tech = {
   name: string;
-  icon: React.ReactNode;
+  category: string;   
+  icon: string;      
   color: string;
 };
 
-/* -------------------- Tech Stack (Brand Colors) -------------------- */
+/* -------------------- Tech Stack -------------------- */
 
 const techStack: Tech[] = [
-  { name: "JavaScript", icon: <FaJs />, color: "text-yellow-400" },
-  { name: "TypeScript", icon: <SiTypescript />, color: "text-blue-500" },
-  { name: "Java", icon: <FaJava />, color: "text-red-500" },
-  { name: "Python", icon: <FaPython />, color: "text-yellow-300" },
+  // Languages
+  { name: "JavaScript", category: "language", icon: "/tech-icons/javascript.svg", color: "bg-gray-500" },
+  { name: "TypeScript", category: "language", icon: "/tech-icons/typescript.svg", color: "bg-gray-500" },
+  { name: "Java", category: "language", icon: "/tech-icons/java.svg", color: "bg-gray-500" },
+  { name: "Python", category: "language", icon: "/tech-icons/python.svg", color: "bg-gray-500" },
+  { name: "SQL", category: "language", icon: "/tech-icons/sql.svg", color: "bg-gray-500" },
 
-  { name: "React", icon: <FaReact />, color: "text-cyan-400" },
-  { name: "Node.js", icon: <FaNodeJs />, color: "text-green-500" },
-  { name: "Express", icon: <SiExpress />, color: "text-gray-400" },
-  { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "text-sky-400" },
+  // Frameworks & Libraries
+  { name: "React.js", category: "framework", icon: "/tech-icons/react.svg", color: "bg-gray-500" },
+  // { name: "Next.js", category: "framework", icon: "/tech-icons/nextjs.svg", color: "bg-gray-500" },
+  { name: "Express.js", category: "framework", icon: "/tech-icons/express.svg", color: "bg-gray-500" },
+  { name: "Node.js", category: "framework", icon: "/tech-icons/nodejs.svg", color: "bg-gray-500" },
+  { name: "FastAPI", category: "framework", icon: "/tech-icons/fastapi.svg", color: "bg-gray-500" },
+  { name: "Tailwind CSS", category: "framework", icon: "/tech-icons/tailwind.svg", color: "bg-gray-500" },
 
-  { name: "MongoDB", icon: <SiMongodb />, color: "text-green-600" },
-  { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-blue-400" },
-  { name: "Redis", icon: <FaRegFloppyDisk />, color: "text-red-500" },
+  // Databases & Tools
+  { name: "MongoDB", category: "database", icon: "/tech-icons/mongodb.svg", color: "bg-gray-500" },
+  { name: "PostgreSQL", category: "database", icon: "/tech-icons/postgresql.svg", color: "bg-gray-500" },
+  { name: "Redis", category: "database", icon: "/tech-icons/redis.svg", color: "bg-gray-500" },
 
-  { name: "Git", icon: <FaGitAlt />, color: "text-orange-500" },
-  { name: "Docker", icon: <FaDocker />, color: "text-blue-400" },
-  { name: "AWS", icon: <FaAws />, color: "text-orange-400" },
-  { name: "Google Cloud", icon: <SiGooglecloud />, color: "text-blue-500" },
-
-  { name: "shadcn/ui", icon: <SchadCNui />, color: "text-foreground" },
-  { name: "Cloud Tools", icon: <Cloud />, color: "text-sky-500" },
+  // Developer Tools
+  { name: "Git", category: "tool", icon: "/tech-icons/Git.svg", color: "bg-gray-500" },
+  { name: "Docker", category: "tool", icon: "/tech-icons/docker.svg", color: "bg-gray-500" },
+  { name: "Azure", category: "tool", icon: "/tech-icons/Azure.svg", color: "bg-gray-500" },
+  { name: "AWS", category: "tool", icon: "/tech-icons/AWS.svg", color: "bg-gray-500" },
+  { name: "Google Cloud", category: "tool", icon: "/tech-icons/gcp.svg", color: "bg-gray-500" },
+  // { name: "Jira", category: "tool", icon: "/tech-icons/Jira.svg", color: "bg-gray-500" },
+  // { name: "Nix OS", category: "tool", icon: "/tech-icons/NixOS.svg", color: "bg-gray-500" },
 ];
 
 /* -------------------- Tech Icon -------------------- */
@@ -68,11 +52,16 @@ const techStack: Tech[] = [
 const TechIcon: React.FC<{ tech: Tech }> = ({ tech }) => {
   return (
     <div className="group flex min-w-[90px] flex-col items-center gap-2 p-3 transition hover:scale-105">
-      <div
-        className={`text-2xl transition-transform duration-300 group-hover:scale-110 ${tech.color}`}
-      >
-        {tech.icon}
+      {/* Icon */}
+      <div className="text-2xl transition-transform duration-300 group-hover:scale-110">
+        <img
+          src={tech.icon}
+          alt={tech.name}
+          className="h-6 w-6 object-contain  opacity-110 group-hover:opacity-100"
+        />
       </div>
+
+      {/* Name */}
       <span className="text-xs text-center text-muted-foreground group-hover:text-foreground">
         {tech.name}
       </span>
@@ -86,27 +75,27 @@ const TechStackMarquee: React.FC = () => {
   return (
     <Reveal delay={0.1}>
       <Container className="mt-8">
-      {/* Section Heading */}
-        <div className="text-base sm:text-xl leading-relaxed -tracking-[0.01em] mb-4 px-4">
-            <SectionHeading subHeading="Known" heading="Tech Stack" />
-            <p className="text-sm sm:text-base text-muted-foreground">
-              Technologies I work with to build products that solve real problems
-            </p>
-          </div>
+        {/* Section Heading */}
+        <div className="mb-4 px-4 text-base sm:text-xl leading-relaxed -tracking-[0.01em]">
+          <SectionHeading subHeading="Known" heading="Tech Stack" />
+          <p className="text-sm sm:text-base text-muted-foreground">
+            Technologies I work with to build products that solve real problems
+          </p>
+        </div>
 
-          {/* Marquee */}
-          <div className="relative">
-            <Marquee pauseOnHover>
-              {techStack.map((tech) => (
-                <TechIcon key={tech.name} tech={tech} />
-              ))}
-            </Marquee>
+        {/* Marquee */}
+        <div className="relative">
+          <Marquee pauseOnHover>
+            {techStack.map((tech) => (
+              <TechIcon key={tech.name} tech={tech} />
+            ))}
+          </Marquee>
 
-            {/* Fade edges */}
-            <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-background to-transparent" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-background to-transparent" />
-          </div>
-          </Container>
+          {/* Fade edges */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-background to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-background to-transparent" />
+        </div>
+      </Container>
     </Reveal>
   );
 };
