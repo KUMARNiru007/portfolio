@@ -25,7 +25,7 @@ export function BlogList({
 
   return (
     <Reveal delay={0.1}>
-      <Container className="mt-8">
+      <Container id="blogs" className="mt-8">
         {/* Section Heading */}
         <div className="text-base sm:text-xl leading-relaxed -tracking-[0.01em] mb-4 px-4">
         <SectionHeading subHeading="Featured" heading="Blogs" />

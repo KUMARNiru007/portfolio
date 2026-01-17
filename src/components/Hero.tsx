@@ -9,7 +9,7 @@ import SectionBorder from "./SectionBorder";
 
 const Hero: React.FC = () => {
   return (
-    <div>
+    <div id="hero">
       {/* Main Content */}
       <div className="mx-auto sm:w-[calc(100%-120px)] w-full max-w-4xl sm:px-0">
         {/* Banner */}

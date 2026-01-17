@@ -74,7 +74,7 @@ const TechIcon: React.FC<{ tech: Tech }> = ({ tech }) => {
 const TechStackMarquee: React.FC = () => {
   return (
     <Reveal delay={0.1}>
-      <Container className="mt-8">
+      <Container id="skills" className="mt-8">
         {/* Section Heading */}
         <div className="mb-4 px-4 text-base sm:text-xl leading-relaxed -tracking-[0.01em]">
           <SectionHeading subHeading="Known" heading="Tech Stack" />
