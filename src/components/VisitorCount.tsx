@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 
-export function VisitorCount({ className }) {
-  const [stats, setStats] = useState(null);
+interface VisitorStats {
+  uniqueVisitors: number;
+}
+
+export function VisitorCount({ className }: { className?: string }) {
+  const [stats, setStats] = useState<VisitorStats | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

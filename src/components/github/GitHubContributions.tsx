@@ -20,8 +20,6 @@ const GitHubContributions: React.FC<GitHubContributionsProps> = ({
   useEffect(() => {
     // Function to get the actual resolved theme
     const getResolvedTheme = (): "light" | "dark" => {
-      const root = window.document.documentElement;
-      
       if (theme === "system") {
         const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
           ? "dark"

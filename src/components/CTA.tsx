@@ -2,6 +2,7 @@ import Container from "../components/Container"
 import { Mail, Paperclip } from "lucide-react"
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa6"
 import { SiLeetcode } from "react-icons/si"
+import React from "react";
 
 export default function CTA({
   socialLinks = {
@@ -17,7 +18,7 @@ export default function CTA({
   const linkBaseClass =
     "flex items-center gap-2 px-3 py-2 bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 transition rounded-full"
 
-  const linkStyle = {
+  const linkStyle: React.CSSProperties = {
     WebkitTapHighlightColor: "transparent",
     userSelect: "none",
   }

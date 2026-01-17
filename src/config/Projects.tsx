@@ -1,16 +1,12 @@
 import {type Project } from "../types/projects.ts";
 
-// react-icons
+
 import {
   FaReact,
 } from "react-icons/fa";
 import {
-  SiNextdotjs,
-  SiTypescript,
-  SiMongodb,
   SiTailwindcss,
   SiVercel,
-  SiMarkdown,
   SiJavascript,
   SiPostgresql,
   SiVite,
