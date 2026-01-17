@@ -7,7 +7,14 @@ export default function Footer() {
         <p className="text-secondary text-center text-sm">
           Design & Developed by 
            <b> {' '}
-             Kumar Nirupam
+             <a
+                    href="https://x.com/KumarNirupam1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium underline underline-offset-4 hover:opacity-80 transition"
+                  >
+                    Kumar Nirupam
+                  </a>
             </b>
             <br /> &copy;{' '} {new Date().getFullYear()}. All rights reserved.
         </p>

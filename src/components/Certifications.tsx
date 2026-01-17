@@ -9,20 +9,20 @@ interface CertificationsProps {
   className?: string;
 }
 
-export function Certifications({ items, className }: CertificationsProps) {
+export function Certifications({ items}: CertificationsProps) {
   if (!items || items.length === 0) return null;
 
   return (
     <Reveal delay={0.1}>
-      <Container id="certifications" className={`mt-16 ${className}`}>
+      <Container id="certifications" className="mt-10">
         
         {/* Section Heading */}
         <div className="mb-8 px-4">
            <SectionHeading 
-             subHeading={`Total: ${items.length}`} 
+             subHeading="Featured"
              heading="Certifications" 
            />
-        </div>
+        
 
         {/* List Section */}
         <div>
@@ -44,7 +44,7 @@ export function Certifications({ items, className }: CertificationsProps) {
                 userSelect: 'none',
               }}
             >
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between ">
                 <div className="flex items-center gap-4">
                   {/* Logo Box */}
                   <div className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 overflow-hidden">
@@ -74,6 +74,7 @@ export function Certifications({ items, className }: CertificationsProps) {
               </div>
             </a>
           ))}
+        </div>
         </div>
 
       </Container>
