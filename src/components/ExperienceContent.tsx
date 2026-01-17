@@ -26,8 +26,8 @@ const ExperienceContent: React.FC = () => {
   const experiences: ExperienceItem[] = [
     {
       company: "MedYatra",
-      position: "Backend Developer (Intern → Part-time)",
-      duration: "June 2025 – Sept 2025",
+      position: "Backend Developer ( Intern )",
+      duration: "June 2025 - Sept 2025",
       location: "Remote",
       achievements: [
         "Led backend development as the founding engineer, delivering MedYatra’s official website to production readiness.",

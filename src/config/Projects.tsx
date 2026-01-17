@@ -205,6 +205,21 @@ export const projects: Project[] = [
         icon: <SiTailwindcss />,
         color: "text-sky-400",
       },
+      {
+        name: "MongoDB",
+        icon: <SiPostgresql />,
+        color: "text-blue-500",
+      },
+      {
+        name: "Node JS",
+        icon: <SiNodedotjs />,
+        color: "text-green-400",
+      },
+      {
+        name: "Express JS",
+        icon: <SiExpress />,
+        color: "text-neutral-900 dark:text-neutral-100",
+      },
     ],
     github: "https://github.com/KUMARNiru007/CloudBox",
     live: "https://cloud-box-storage-one.vercel.app/",

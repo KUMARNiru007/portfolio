@@ -2,22 +2,22 @@ import {type BlogPost } from '../types/blog'
 
 export const blogs: BlogPost[] = [
   {
-    id: 'problem-solving',
-    title: 'How I Choose Problems, Solve Them, and End Up Getting Traction',
-    readTime: '4 min read',
-    externalUrl: 'https://medium.com/@code_kartik/how-i-choose-problems-solve-them-and-end-up-getting-traction-89f259eadd4b'
+    id: '01',
+    title: 'Web Jargons for Dummies',
+    readTime: '7 min read',
+    externalUrl: 'https://web-jargons.hashnode.dev/web-jargons-for-dummies'
   },
   {
-    id: 'ssh-server-guide',
-    title: 'How to SSH Into Your Server (The Right Way) A Beginner-Friendly Guide with Pro Tips',
-    readTime: '3 min read',
-    externalUrl: 'https://medium.com/@code_kartik/how-to-ssh-into-your-server-the-right-way-a-beginner-friendly-guide-with-pro-tips-cbd0e8855c9a'
-  },
-  {
-    id: 'rag',
-    title: 'What is RAG? Why you should learn it?',
+    id: '02',
+    title: 'Is your Internet Connection Coming from The Digital cloud or Beneath the Ocean',
     readTime: '6 min read',
-    externalUrl: 'https://medium.com/@code_kartik/what-is-rag-why-you-should-learn-it-c9408f233086'
+    externalUrl: 'https://web-jargons.hashnode.dev/is-your-internet-connection-coming-from-the-digital-cloud-or-beneath-the-ocean'
+  },
+  {
+    id: '03',
+    title: 'Battle of Array Methods in JavaScript : Ash vs Alain - the Kalos League Final',
+    readTime: '6 min read',
+    externalUrl: 'https://kumar-nirupam-webdev.hashnode.dev/battle-of-array-methods-in-javascript-ash-vs-alain-the-kalos-league-final'
   }
 ]
 

@@ -57,7 +57,7 @@ const TechIcon: React.FC<{ tech: Tech }> = ({ tech }) => {
         <img
           src={tech.icon}
           alt={tech.name}
-          className="h-6 w-6 object-contain  opacity-110 group-hover:opacity-100"
+          className="h-9 w-9 object-contain  opacity-110 group-hover:opacity-100"
         />
       </div>
 

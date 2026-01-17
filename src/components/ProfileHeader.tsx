@@ -20,6 +20,7 @@ interface ProfileHeaderProps {
   title?: string;
   profileImage?: string;
   socialLinks?: {
+    leetcode?: string;
     twitter?: string;
     resume?: string;
     github?: string;
@@ -74,14 +75,14 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
     linkedin: "https://www.linkedin.com/in/kumarnirupam/",
     resume:
       "https://drive.google.com/file/d/19RyNZzTxqUg6VWMEAmXxaXozPSblTF9R/view?usp=sharing",
-      leetcode : "https://leetcode.com/u/user8723jT/"
+      leetcode : "https://leetcode.com/u/user8723jT/",
   },
 }) => {
 
   const socials = [
     { href: socialLinks.github, label: "GitHub", icon: <FaGithub /> },
     { href: socialLinks.twitter, label: "Twitter", icon: <FaXTwitter /> },
-    { href: socialLinks.twitter, label: "Leetcode", icon: <SiLeetcode /> },
+    { href: socialLinks.leetcode, label: "Leetcode", icon: <SiLeetcode /> },
     { href: socialLinks.linkedin, label: "LinkedIn", icon: <FaLinkedin /> },
     { href: socialLinks.resume, label: "Resume", icon: <FaPaperclip /> },
   ];

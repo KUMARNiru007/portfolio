@@ -14,7 +14,7 @@ const BannerSection = () => {
 
         <div className="absolute inset-0 flex items-center justify-center px-4">
           <p className="text-white text-base sm:text-xl italic text-center drop-shadow-lg">
-           When nothing supports you, let self-belief be the ground you stand on.
+           The only way to predict the future is to build it.
           </p>
         </div>
       </div>
