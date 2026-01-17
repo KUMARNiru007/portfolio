@@ -13,7 +13,7 @@ export default function CTA({
     linkedin: "https://www.linkedin.com/in/kumarnirupam/",
     resume:
       "https://drive.google.com/file/d/1D9OdBbT4HA5DSvkw0bVl3WMm-huVaTNH/view?usp=sharing",
-    mail: "mailto:kumarnirupam@gmail.com",
+    mail: "mailto:kumar.nirupam24@gmail.com",
   },
 }) {
   const linkBaseClass =
