@@ -13,19 +13,14 @@ export function ScrollTop() {
   const { scrollY, scrollYProgress } = useScroll();
 
   const [visible, setVisible] = React.useState(false);
-  const lastY = React.useRef(0);
 
   // Magnetic effect
   const x = useSpring(0, { stiffness: 200, damping: 15 });
   const y = useSpring(0, { stiffness: 200, damping: 15 });
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    const scrollingDown = latest > lastY.current;
 
-    // show only when scrolling down & past threshold
-    setVisible(scrollingDown && latest > 300);
-
-    lastY.current = latest;
+    setVisible(latest > 300);
   });
 
   const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -44,7 +39,7 @@ export function ScrollTop() {
 
   return (
     <motion.div
-      className="fixed right-6 bottom-6 z-50"
+      className="fixed right-6 bottom-6 z-50 flex h-16 w-16 items-center justify-center"
       initial={{ opacity: 0, scale: 0.7, y: 20 }}
       animate={
         visible
@@ -55,18 +50,29 @@ export function ScrollTop() {
     >
       {/* Circular Progress */}
       <svg
-        className="absolute inset-0 -rotate-90"
+        className="absolute inset-0 -rotate-90 text-muted-foreground/20"
         width="64"
         height="64"
+        viewBox="0 0 64 64" 
       >
+        {/* Background track circle (optional, provides structure) */}
+        <circle
+          cx="32"
+          cy="32"
+          r="30"
+          fill="none"
+          strokeWidth="2"
+          stroke="currentColor"
+        />
+        {/* Progress Circle */}
         <motion.circle
           cx="32"
           cy="32"
-          r="28"
+          r="30" // Adjusted radius to sit outside the 56px button
           fill="none"
           strokeWidth="3"
           stroke="currentColor"
-          className="text-muted-foreground/40"
+          className="text-foreground" // Made progress darker/visible
           style={{
             pathLength: scrollYProgress,
           }}
@@ -82,9 +88,9 @@ export function ScrollTop() {
         }
         style={{ x, y }}
         className={cn(
-          "relative h-14 w-14 rounded-full",
+          "relative h-14 w-14 rounded-full", 
           "flex items-center justify-center",
-          "bg-background/60 backdrop-blur-xl",
+          "bg-background/80 backdrop-blur-xl",
           "border border-border/40",
           "shadow-lg",
           "hover:scale-105 transition-transform"

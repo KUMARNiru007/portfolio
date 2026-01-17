@@ -17,7 +17,6 @@ import { blogs } from "../config/blogs";
 import CTA from "../components/CTA";
 import ReactLenis from 'lenis/react';
 import Footer from "../components/Footer";
-import { ScrollTop } from "@/components/ui/scrollToTop";
 // import { VisitorCount } from "./components/VisitorCount";
 
 const Home: React.FC = () => {
@@ -79,7 +78,7 @@ const Home: React.FC = () => {
 
           
         </div>
-         <ScrollTop />
+         
         </div>
         </ReactLenis>
       </TooltipProvider>
