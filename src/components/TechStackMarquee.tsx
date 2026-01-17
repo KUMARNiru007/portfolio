@@ -26,6 +26,8 @@ import {
 // lucide-react
 import { Boxes, Cloud } from "lucide-react";
 import SectionHeading from "./SectionHeading";
+import Container from "./Container";
+import { FaRegFloppyDisk } from "react-icons/fa6";
 
 /* -------------------- Types -------------------- */
 
@@ -50,14 +52,14 @@ const techStack: Tech[] = [
 
   { name: "MongoDB", icon: <SiMongodb />, color: "text-green-600" },
   { name: "PostgreSQL", icon: <SiPostgresql />, color: "text-blue-400" },
-  { name: "Redis", icon: <SiRedis />, color: "text-red-500" },
+  { name: "Redis", icon: <FaRegFloppyDisk />, color: "text-red-500" },
 
   { name: "Git", icon: <FaGitAlt />, color: "text-orange-500" },
   { name: "Docker", icon: <FaDocker />, color: "text-blue-400" },
   { name: "AWS", icon: <FaAws />, color: "text-orange-400" },
   { name: "Google Cloud", icon: <SiGooglecloud />, color: "text-blue-500" },
 
-  { name: "shadcn/ui", icon: <Boxes />, color: "text-foreground" },
+  { name: "shadcn/ui", icon: <SchadCNui />, color: "text-foreground" },
   { name: "Cloud Tools", icon: <Cloud />, color: "text-sky-500" },
 ];
 
@@ -83,11 +85,8 @@ const TechIcon: React.FC<{ tech: Tech }> = ({ tech }) => {
 const TechStackMarquee: React.FC = () => {
   return (
     <Reveal delay={0.1}>
-      <div className="sm:px-12 mt-4 sm:mt-6 mb-4 sm:mb-6">
-        <div className="px-4">
-          {/* Title */}
-          <div className="mb-4">
-            {/* Section Heading */}
+      <Container className="mt-8">
+      {/* Section Heading */}
         <div className="text-base sm:text-xl leading-relaxed -tracking-[0.01em] mb-4 px-4">
             <SectionHeading subHeading="Known" heading="Tech Stack" />
             <p className="text-sm sm:text-base text-muted-foreground">
@@ -107,9 +106,7 @@ const TechStackMarquee: React.FC = () => {
             <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-background to-transparent" />
             <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-background to-transparent" />
           </div>
-          </div>
-        </div>
-      </div>
+          </Container>
     </Reveal>
   );
 };

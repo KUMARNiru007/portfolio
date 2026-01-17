@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
-import ProjectsPage from "./pages/project";
+import ProjectsPage from "./pages/Project";
 import BlogPage from "./pages/Blog";
 
 const App: React.FC = () => {

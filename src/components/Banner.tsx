@@ -8,13 +8,13 @@ const BannerSection = () => {
         <img
           src={bannerImage}
           alt="Banner"
-          className="w-full h-[200px] sm:h-[270px] object-cover"
+          className="w-full h-[200px] sm:h-[270px] object-cover opacity-70"
           style={{ minHeight: "100px" }}
         />
 
         <div className="absolute inset-0 flex items-center justify-center px-4">
           <p className="text-white text-base sm:text-xl italic text-center drop-shadow-lg">
-           You make your own luck if you stay at it long enough.
+           When nothing supports you, let self-belief be the ground you stand on.
           </p>
         </div>
       </div>

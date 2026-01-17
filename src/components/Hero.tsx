@@ -34,10 +34,10 @@ const Hero: React.FC = () => {
               <ContentSection className="pb-6 sm:pb-8 pt-4 sm:pt-6 px-2 sm:px-0">
                 <ContentParagraph className="mb-2 text-base sm:text-lg leading-relaxed">
                   <span className="font-medium dark:text-white text-black">
-                    Hello, World! <br />
+                    Hello, There ! <br />
                   </span>
 
-                  I&apos;m a full-stack developer passionate about building scalable,
+                  I&apos;m Kumar Nirupam - a Full-stack developer passionate about building scalable,
                   user-friendly products with clean code and thoughtful design.
                   <br />
                   <br />

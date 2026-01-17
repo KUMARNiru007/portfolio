@@ -3,6 +3,8 @@ import { ChevronDown } from "lucide-react";
 import { Tooltip, TooltipTrigger, TooltipContent } from "../components/ui/tooltip";
 import Reveal from "../components/Reveal";
 import image from "../assets/medyatra.jpg"
+import SectionHeading from "./SectionHeading";
+import Container from "./Container";
 
 /* -------------------- Types -------------------- */
 
@@ -48,12 +50,10 @@ const ExperienceContent: React.FC = () => {
 
   return (
     <Reveal delay={0.1}>
-      <div className="sm:px-12 py-2">
-        {/* Section Heading */}
+      <Container className="mt-8">
+      {/* Section Heading */}
         <div className="text-base sm:text-xl leading-relaxed -tracking-[0.01em] mb-4 px-4">
-        <h2 className="text-base sm:text-xl mb-3 opacity-20 mt-4 sm:mt-6 px-4">
-          Professional Experience
-        </h2>
+        <SectionHeading subHeading="Work" heading="Experiance" />
 
         {/* Experience List */}
         <div className="px-4 space-y-4 dark:text-white/70 text-black/70 pb-4">
@@ -159,7 +159,7 @@ const ExperienceContent: React.FC = () => {
           })}
         </div>
         </div>
-      </div>
+        </Container >
     </Reveal>
   );
 };

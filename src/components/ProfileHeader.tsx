@@ -5,14 +5,14 @@ import {
   FaGithub,
   FaPaperclip,
 } from "react-icons/fa6";
-import { Moon, Sun } from "lucide-react";
 
 import {
   Tooltip,
   TooltipTrigger,
   TooltipContent,
 } from "../components/ui/tooltip";
-import { useTheme } from "../hooks/useTheme";
+import { SiLeetcode } from "react-icons/si";
+import { RotatingText } from "@/components/rotating-text";
 
 interface ProfileHeaderProps {
   name?: string;
@@ -67,27 +67,23 @@ const IconButton: React.FC<IconButtonProps> = ({
 
 const ProfileHeader: React.FC<ProfileHeaderProps> = ({
   name = "Kumar Nirupam",
-  age = "22",
-  title = "engineer • developer • builder",
   profileImage = "/profilepic.webp",
   socialLinks = {
     twitter: "https://x.com/KumarNirupam1",
     github: "https://github.com/KUMARNiru007",
     linkedin: "https://www.linkedin.com/in/kumarnirupam/",
     resume:
-      "https://drive.google.com/file/d/1D9OdBbT4HA5DSvkw0bVl3WMm-huVaTNH/view?usp=sharing",
+      "https://drive.google.com/file/d/19RyNZzTxqUg6VWMEAmXxaXozPSblTF9R/view?usp=sharing",
+      leetcode : "https://leetcode.com/u/user8723jT/"
   },
 }) => {
-  const { theme, setTheme } = useTheme();
-
-  const toggleTheme = () =>
-    setTheme(theme === "light" ? "dark" : "light");
 
   const socials = [
     { href: socialLinks.github, label: "GitHub", icon: <FaGithub /> },
     { href: socialLinks.twitter, label: "Twitter", icon: <FaXTwitter /> },
-    { href: socialLinks.resume, label: "Resume", icon: <FaPaperclip /> },
+    { href: socialLinks.twitter, label: "Leetcode", icon: <SiLeetcode /> },
     { href: socialLinks.linkedin, label: "LinkedIn", icon: <FaLinkedin /> },
+    { href: socialLinks.resume, label: "Resume", icon: <FaPaperclip /> },
   ];
 
   return (
@@ -109,7 +105,7 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
             {name}
           </h1>
           <p className="opacity-40 text-xs sm:text-sm">
-            {age} • {title}
+           <RotatingText />
           </p>
         </div>
 
@@ -124,13 +120,13 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
               )
           )}
 
-          <IconButton label="Toggle theme" onClick={toggleTheme}>
+          {/* <IconButton label="Toggle theme" onClick={toggleTheme}>
             {theme === "light" ? (
               <Moon className="w-4 h-4" />
             ) : (
               <Sun className="w-4 h-4" />
             )}
-          </IconButton>
+          </IconButton> */}
         </div>
       </div>
     </div>

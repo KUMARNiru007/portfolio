@@ -2,6 +2,7 @@ import React from "react";
 import Reveal from "../../components/Reveal";
 import GitHubContributions from "./GitHubContributions";
 import SectionHeading from "../SectionHeading";
+import Container from "../Container";
 
 interface ContributionsDisplayProps {
   username: string;
@@ -19,8 +20,8 @@ const ContributionsDisplay: React.FC<ContributionsDisplayProps> = ({
 
   return (
     <Reveal delay={0.1}>
-      <div className="sm:px-12 px-0 mt-8">
-        {/* Section Heading */}
+      <Container className="mt-8">
+      {/* Section Heading */}
         <div className="text-base sm:text-xl leading-relaxed -tracking-[0.01em] mb-4 px-4">
         <SectionHeading subHeading="Featured" heading="GitHub" />
         <h2 className="sm:text-xl opacity-30 mt-2 ">
@@ -37,7 +38,7 @@ const ContributionsDisplay: React.FC<ContributionsDisplayProps> = ({
             className={className}
           />
         </div>
-      </div>
+      </Container>
     </Reveal>
   );
 };

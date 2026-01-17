@@ -292,3 +292,17 @@
 .animate-marquee-reverse {
   animation: marquee-reverse 80s linear infinite;
 }
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out;
+}

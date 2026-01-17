@@ -11,8 +11,8 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
 }) => {
   return (
     <div>
-      <p className="text-secondary text-sm">{subHeading}</p>
-      <h2 className="text-2xl font-bold">{heading}</h2>
+      <p className="text-secondary text-sm ">{subHeading}</p>
+      <h2 className="text-2xl font-medium ita">{heading}</h2>
     </div>
   );
 };
