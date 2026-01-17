@@ -50,7 +50,7 @@ const ExperienceContent: React.FC = () => {
 
   return (
     <Reveal delay={0.1}>
-      <Container id="experience" className="mt-8">
+      <Container id="experience" className="mt-8 scroll-mt-20">
       {/* Section Heading */}
         <div className="text-base sm:text-xl leading-relaxed -tracking-[0.01em] mb-4 px-4">
         <SectionHeading subHeading="Work" heading="Experiance" />

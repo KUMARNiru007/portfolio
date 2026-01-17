@@ -18,8 +18,6 @@ import {
   SiExpress,
 } from "react-icons/si";
 
-// lucide-react
-import { Box } from "lucide-react";
 
 export const projects: Project[] = [
   {

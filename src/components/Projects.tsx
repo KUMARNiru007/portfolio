@@ -13,7 +13,7 @@ const Projects: React.FC = () => {
   return (
       
     <Reveal delay={0.1}>
-    <Container id="projects" className="mt-10">
+    <Container id="projects" className="mt-10 scroll-mt-20">
       <div className="-tracking-[0.01em] mb-4 px-4">
       <SectionHeading subHeading="Featured" heading="Projects" />
 

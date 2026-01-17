@@ -5,7 +5,6 @@ import { Marquee } from "../components/ui/marquee";
 import SectionHeading from "./SectionHeading";
 import Container from "./Container";
 
-/* -------------------- Types -------------------- */
 
 type Tech = {
   name: string;
@@ -14,7 +13,6 @@ type Tech = {
   color: string;
 };
 
-/* -------------------- Tech Stack -------------------- */
 
 const techStack: Tech[] = [
   // Languages
@@ -47,7 +45,7 @@ const techStack: Tech[] = [
   // { name: "Nix OS", category: "tool", icon: "/tech-icons/NixOS.svg", color: "bg-gray-500" },
 ];
 
-/* -------------------- Tech Icon -------------------- */
+
 
 const TechIcon: React.FC<{ tech: Tech }> = ({ tech }) => {
   return (
@@ -74,7 +72,7 @@ const TechIcon: React.FC<{ tech: Tech }> = ({ tech }) => {
 const TechStackMarquee: React.FC = () => {
   return (
     <Reveal delay={0.1}>
-      <Container id="skills" className="mt-8">
+      <Container id="skills" className="mt-8 scroll-mt-20">
         {/* Section Heading */}
         <div className="mb-4 px-4 text-base sm:text-xl leading-relaxed -tracking-[0.01em]">
           <SectionHeading subHeading="Known" heading="Tech Stack" />

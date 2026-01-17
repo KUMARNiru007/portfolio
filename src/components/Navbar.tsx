@@ -1,17 +1,34 @@
+import { useEffect, useState } from "react"
 import { ModeToggle } from "@/components/mode-toggle"
 
 function Navbar() {
-  const handleNavClick = (
-    targetId: string
-  ) => {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const handleNavClick = (targetId: string) => {
     const targetElement = document.getElementById(targetId)
     targetElement?.scrollIntoView({ behavior: "smooth" })
   }
 
   return (
-    <header className="w-full bg-background text-foreground border-b border-border">
+    <header
+      className={`fixed top-0 left-0 z-50 w-full transition-all duration-300
+        ${
+          scrolled
+            ? "bg-background/60 backdrop-blur-md border-b border-border shadow-sm"
+            : "bg-background border-b border-border"
+        }
+      `}
+    >
       <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-3">
-
         {/* Logo */}
         <div className="flex items-center gap-4">
           <div className="text-sm font-semibold">Kumar Nirupam</div>
@@ -27,7 +44,6 @@ function Navbar() {
             <li onClick={() => handleNavClick("socials")} className="cursor-pointer hover:text-primary hover:underline">Socials</li>
             <li onClick={() => handleNavClick("blogs")} className="cursor-pointer hover:text-primary hover:underline">Blogs</li>
 
-            {/* External link */}
             <li>
               <a
                 href="https://drive.google.com/file/d/19RyNZzTxqUg6VWMEAmXxaXozPSblTF9R/view"

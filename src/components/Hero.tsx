@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
               <ContentSection className="pb-6 sm:pb-8 pt-4 sm:pt-6 px-2 sm:px-0">
                 <ContentParagraph className="mb-2 text-base sm:text-lg leading-relaxed">
                   <span className="font-medium dark:text-white text-black">
-                    Hello, There ! <br />
+                  Hello there! 👋<br />
                   </span>
 
                   I&apos;m Kumar Nirupam - a Full-stack developer passionate about building scalable,
@@ -92,12 +92,7 @@ const Hero: React.FC = () => {
                   <span className="font-medium">system design</span>, scalable
                   architectures, and strengthening my data structures knowledge
                   in Java.
-                  <br />
-                  <br />
 
-                  <span className="font-medium">
-                    Let&apos;s connect and build something meaningful together!
-                  </span>
                 </ContentParagraph>
               </ContentSection>
             </Reveal>
