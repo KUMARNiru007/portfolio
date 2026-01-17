@@ -142,7 +142,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </div>
 
           <a
-            href={project.projectDetailsPageSlug}
+            href={project.github}
             className="flex items-center gap-2 text-sm text-secondary hover:text-primary hover:underline"
           >
             View Details <ArrowRight className="size-4" />

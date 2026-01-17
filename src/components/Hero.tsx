@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
   return (
     <div id="hero">
       {/* Main Content */}
-      <div className="mx-auto sm:w-[calc(100%-120px)] w-full max-w-4xl sm:px-0">
+      <div className="mt-10 mx-auto sm:w-[calc(100%-120px)] w-full max-w-4xl sm:px-0">
         {/* Banner */}
         <Reveal delay={0.1}>
           <BannerSection />

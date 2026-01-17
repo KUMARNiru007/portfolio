@@ -53,7 +53,7 @@ const ExperienceContent: React.FC = () => {
       <Container id="experience" className="mt-8 scroll-mt-20">
       {/* Section Heading */}
         <div className="text-base sm:text-xl leading-relaxed -tracking-[0.01em] mb-4 px-4">
-        <SectionHeading subHeading="Work" heading="Experiance" />
+        <SectionHeading subHeading="Work" heading="Experience" />
 
         {/* Experience List */}
         <div className="px-4 space-y-4 dark:text-white/70 text-black/70 pb-4">
