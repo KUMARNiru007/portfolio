@@ -14,7 +14,7 @@ const Projects: React.FC = () => {
       
     <Reveal delay={0.1}>
     <Container className="mt-20">
-      <div className="text-base sm:text-xl leading-relaxed -tracking-[0.01em] mb-4 px-4">
+      <div className="-tracking-[0.01em] mb-4 px-4">
       <SectionHeading subHeading="Featured" heading="Projects" />
 
       <ProjectList className="mt-8" projects={featuredProjects} />
