@@ -1,0 +1,70 @@
+/* src/components/DigitalSelf.css */
+
+.room-container {
+  position: relative;
+  width: 300px;  /* Total width of the room */
+  height: 120px; /* Height of the room */
+  border-bottom: 2px solid #374151; /* The floor line */
+  background-color: transparent;
+  overflow: hidden; /* Keeps the character inside the box */
+  margin: 0 auto; /* Centers the room */
+}
+
+/* --- Furniture --- */
+.furniture {
+  position: absolute;
+  bottom: 0;
+  width: 64px; /* Adjust size if your bed/desk images look too small/big */
+  image-rendering: pixelated; /* Keeps pixel art crisp */
+}
+
+/* --- The Character --- */
+.character {
+  width: 32px;  /* Width of ONE frame in your sprite sheet */
+  height: 32px; /* Height of ONE frame */
+  position: absolute;
+  bottom: 0;
+  
+  /* This creates the smooth sliding movement across the floor */
+  transition: left 3s linear; 
+  
+  background-image: url('/character-sheet.png'); 
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+}
+
+/* --- Animation States --- */
+
+/* State 1: Sleeping (Row 1 of sprite sheet) */
+.state-sleeping {
+  background-position: 0px 0px;
+}
+
+/* State 2: Walking (Row 2 of sprite sheet) */
+.state-walking {
+  background-position: 0px -32px; /* Shifts down 32px to the second row */
+  /* 'steps(4)' makes it snap between frames instead of blurring */
+  animation: walkAnim 0.8s steps(4) infinite; 
+}
+
+/* State 3: Coding (Row 3 of sprite sheet) */
+.state-coding {
+  background-position: 0px -64px; /* Shifts down 64px to the third row */
+  animation: codeAnim 1s steps(4) infinite;
+}
+
+/* Utility: Face left when walking back to bed */
+.face-left {
+  transform: scaleX(-1);
+}
+
+/* --- Keyframes (The actual movement of the sprite frames) --- */
+@keyframes walkAnim {
+  from { background-position-x: 0px; }
+  to { background-position-x: -128px; } /* Moves 4 frames (4 * 32px = 128px) */
+}
+
+@keyframes codeAnim {
+  from { background-position-x: 0px; }
+  to { background-position-x: -128px; }
+}
