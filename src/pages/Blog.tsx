@@ -33,7 +33,7 @@ function BlogPage() {
       <div className="space-y-8">
               <div className="absolute left-4 top-20 z-20">
         <button
-        onClick={() => navigate(-1)}
+        onClick={() => navigate(`/`)}
         className="flex items-center gap-2 rounded-md border px-3 py-1.5 text-sm
                   text-muted-foreground hover:bg-accent hover:text-foreground transition"
       >
