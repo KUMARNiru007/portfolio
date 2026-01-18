@@ -64,11 +64,11 @@ function Navbar() {
         {/* Nav */}
         <nav className="flex items-center gap-6">
           <ul className="hidden md:flex items-center gap-6 text-sm text-secondary">
-            <li onClick={() => handleNavClick("projects")} className="cursor-pointer hover:text-primary hover:underline transition-colors">Projects</li>
+            <li onClick={() => navigate(`/projects`)} className="cursor-pointer hover:text-primary hover:underline transition-colors">Projects</li>
             <li onClick={() => handleNavClick("skills")} className="cursor-pointer hover:text-primary hover:underline transition-colors">Skills</li>
             <li onClick={() => handleNavClick("experience")} className="cursor-pointer hover:text-primary hover:underline transition-colors">Experience</li>
             <li onClick={() => handleNavClick("socials")} className="cursor-pointer hover:text-primary hover:underline transition-colors">Socials</li>
-            <li onClick={() => handleNavClick("blogs")} className="cursor-pointer hover:text-primary hover:underline transition-colors">Blogs</li>
+            <li onClick={() => navigate(`/blogs`)} className="cursor-pointer hover:text-primary hover:underline transition-colors">Blogs</li>
 
             <li>
               <a

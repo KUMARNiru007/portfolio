@@ -1,3 +1,6 @@
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+
 import SectionBorder from '@/components/SectionBorder';
 import Container from '../components/Container';
 import  ProjectList  from '../components/projects/ProjectList';
@@ -10,6 +13,11 @@ import DiagonalPattern from '@/components/DiagonalPattern';
 import Footer from '@/components/Footer';
 
  function ProjectsPage() {
+  
+  const navigate = useNavigate();
+
+
+
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <TooltipProvider>
@@ -25,6 +33,19 @@ import Footer from '@/components/Footer';
             <DiagonalPattern side="right" />
     <Container className="py-16">
       <div className="space-y-8">
+
+      <div className="absolute left-4 top-20 z-20">
+        <button
+        onClick={() => navigate(-1)}
+        className="flex items-center gap-2 rounded-md border px-3 py-1.5 text-sm
+                  text-muted-foreground hover:bg-accent hover:text-foreground transition"
+      >
+
+          <ArrowLeft className="h-4 w-4" />
+          Back
+        </button>
+      </div>
+
         {/* Header */}
         <div className="space-y-3 text-center mt-14">
           <h1 className="text-4xl font-semibold tracking-tight lg:text-5xl">
