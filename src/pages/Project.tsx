@@ -26,12 +26,12 @@ import Footer from '@/components/Footer';
     <Container className="py-16">
       <div className="space-y-8">
         {/* Header */}
-        <div className="space-y-4 text-center mt-10">
-          <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
+        <div className="space-y-3 text-center mt-14">
+          <h1 className="text-4xl font-semibold tracking-tight lg:text-5xl">
             Projects
           </h1>
-          <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
-            My projects and work across different technologies and domains.
+          <p className="mx-auto max-w-2xl text-base text-muted-foreground">
+          My projects and work across different technologies and domains.
           </p>
         </div>
 

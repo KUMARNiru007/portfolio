@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react"
 import { ModeToggle } from "@/components/mode-toggle"
+import {useNavigate } from "react-router-dom"
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mounted, setMounted] = useState(false)
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     setMounted(true)
@@ -43,7 +46,7 @@ function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-50 w-full transition-all duration-300
+      className={`fixed top-0 left-0 z-50 w-full transition-[background-co border-color,color,box-shadow] duration-300 ease-in-out
         ${
           scrolled
             ? "bg-background/60 backdrop-blur-md border-b border-border shadow-sm"
@@ -54,7 +57,7 @@ function Navbar() {
       <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-3">
         {/* Logo */}
         <div className="flex items-center gap-4">
-          <div className="text-sm font-semibold">Kumar Nirupam</div>
+          <div className="text-sm font-semibold cursor-pointer" onClick={() => navigate(`/`)}>Kumar Nirupam</div>
           <div className="h-7 w-px bg-border/20" />
         </div>
 
