@@ -7,6 +7,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import ReactLenis from 'lenis/react';
 import Navbar from '@/components/Navbar';
 import DiagonalPattern from '@/components/DiagonalPattern';
+import Footer from '@/components/Footer';
 
  function ProjectsPage() {
   return (
@@ -25,7 +26,7 @@ import DiagonalPattern from '@/components/DiagonalPattern';
     <Container className="py-16">
       <div className="space-y-8">
         {/* Header */}
-        <div className="space-y-4 text-center">
+        <div className="space-y-4 text-center mt-10">
           <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
             Projects
           </h1>
@@ -55,6 +56,7 @@ import DiagonalPattern from '@/components/DiagonalPattern';
       </div>
     </Container>
     </div>
+    <Footer />
                 </div>
               </ReactLenis>
         </TooltipProvider>      

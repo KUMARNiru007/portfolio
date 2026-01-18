@@ -12,13 +12,12 @@ import ContributionsDisplay  from "../components/github/ContributionsDisplay";
 import Reveal from "../components/Reveal";
 import SectionBorder from "../components/SectionBorder";
 import ExperienceContent from "../components/ExperienceContent";
-import { BlogList } from "../components/blogs/BlogList";
-import { blogs } from "../config/blogs";
 import CTA from "../components/CTA";
 import ReactLenis from 'lenis/react';
 import Footer from "../components/Footer";
 import { Certifications } from "@/components/Certifications";
 import { certifications } from "@/config/certifications";
+import Blogs from "@/components/Blog";
 // import { VisitorCount } from "./components/VisitorCount";
 
 const Home: React.FC = () => {
@@ -67,7 +66,7 @@ const Home: React.FC = () => {
                 <SectionBorder className="mt-6" />
               </Reveal>
               
-               <BlogList blogs={blogs} />
+               <Blogs  />
 
 
               <Reveal delay={0.05}>

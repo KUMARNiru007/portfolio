@@ -1,12 +1,13 @@
 import SectionBorder from '@/components/SectionBorder';
 import Container from '../components/Container';
+import BlogList from '../components/blogs/BlogList';
+import { blogs } from '@/config/blogs';
 import { ThemeProvider } from '@/hooks/useTheme';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import ReactLenis from 'lenis/react';
 import Navbar from '@/components/Navbar';
 import DiagonalPattern from '@/components/DiagonalPattern';
-import { BlogList } from '@/components/blogs/BlogList';
-import { blogs } from "../config/blogs";
+import Footer from '@/components/Footer';
 
 function BlogPage() {
   return (
@@ -25,8 +26,8 @@ function BlogPage() {
     <Container className="py-16">
       <div className="space-y-8">
         {/* Header */}
-        <div className="space-y-4 text-center">
-          <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
+        <div className="space-y-4 text-center mt-10">
+          <h1 className="text-4xl font-bold tracking-tight lg:text-5xl ">
             Blogs
           </h1>
           <p className="text-muted-foreground mx-auto max-w-2xl text-lg">
@@ -55,6 +56,7 @@ function BlogPage() {
       </div>
     </Container>
     </div>
+    <Footer />
                 </div>
               </ReactLenis>
         </TooltipProvider>      
