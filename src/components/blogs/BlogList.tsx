@@ -11,7 +11,6 @@ interface BlogListProps {
 
 const BlogList : React.FC<BlogListProps>=({ 
   blogs, 
-  className="",
 }) => {
   if (!blogs.length) {
     return (
