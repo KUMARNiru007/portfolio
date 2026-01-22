@@ -12,6 +12,7 @@ import {
   SiVite,
   SiNodedotjs,
   SiExpress,
+  SiMongodb,
 } from "react-icons/si";
 
 
@@ -45,7 +46,7 @@ export const projects: Project[] = [
         color: "text-neutral-900 dark:text-neutral-100",
       },
       {
-        name: "MongoDB",
+        name: "Postgresql",
         icon: <SiPostgresql />,
         color: "text-blue-500",
       },
@@ -100,7 +101,7 @@ export const projects: Project[] = [
         color: "text-neutral-900 dark:text-neutral-100",
       },
       {
-        name: "MongoDB",
+        name: "Postgresql",
         icon: <SiPostgresql />,
         color: "text-blue-500",
       },
@@ -201,7 +202,7 @@ export const projects: Project[] = [
       },
       {
         name: "MongoDB",
-        icon: <SiPostgresql />,
+        icon: <SiMongodb />,
         color: "text-blue-500",
       },
       {
