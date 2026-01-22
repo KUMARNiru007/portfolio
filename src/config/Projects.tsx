@@ -203,7 +203,7 @@ export const projects: Project[] = [
       {
         name: "MongoDB",
         icon: <SiMongodb />,
-        color: "text-blue-500",
+        color: "text-green-500",
       },
       {
         name: "Node JS",
