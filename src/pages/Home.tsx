@@ -1,6 +1,7 @@
 import React from "react";
 
 import Hero from "../components/Hero";
+import { useSEO } from "../hooks/useSEO";
 
 import { ThemeProvider } from "../hooks/useTheme";
 import { TooltipProvider } from "../components/ui/tooltip";
@@ -21,6 +22,13 @@ import Blogs from "@/components/Blog";
 // import { VisitorCount } from "./components/VisitorCount";
 
 const Home: React.FC = () => {
+  useSEO({
+    title: 'Kumar Nirupam - Full Stack Software Engineer | Portfolio',
+    description: 'Explore Kumar Nirupam\'s portfolio - a skilled full stack software engineer specializing in web development, React, TypeScript, and modern web technologies. View projects, blogs, and professional experience.',
+    keywords: 'Software Engineer, Full Stack Developer, React, TypeScript, Web Development, Portfolio, Kumar Nirupam',
+    url: 'https://knirupam.vercel.app/',
+    type: 'website'
+  });
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <TooltipProvider>

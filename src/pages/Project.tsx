@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { useSEO } from '@/hooks/useSEO';
 
 import SectionBorder from '@/components/SectionBorder';
 import Container from '../components/Container';
@@ -13,6 +14,13 @@ import DiagonalPattern from '@/components/DiagonalPattern';
 import Footer from '@/components/Footer';
 
  function ProjectsPage() {
+  useSEO({
+    title: 'Projects - Kumar Nirupam | Full Stack Developer Portfolio',
+    description: 'Explore Kumar Nirupam\'s portfolio projects showcasing expertise in web development, React, TypeScript, and full stack technologies across various domains.',
+    keywords: 'Projects, Portfolio, Web Development, React, TypeScript, Full Stack, Software Engineering',
+    url: 'https://knirupam.vercel.app/projects',
+    type: 'website'
+  });
   
   const navigate = useNavigate();
 

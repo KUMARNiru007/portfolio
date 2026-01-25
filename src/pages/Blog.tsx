@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { useSEO } from '@/hooks/useSEO';
 
 import SectionBorder from '@/components/SectionBorder';
 import Container from '../components/Container';
@@ -13,6 +14,13 @@ import DiagonalPattern from '@/components/DiagonalPattern';
 import Footer from '@/components/Footer';
 
 function BlogPage() {
+  useSEO({
+    title: 'Blog - Kumar Nirupam | Articles on Web Development & Technology',
+    description: 'Read Kumar Nirupam\'s blog articles about web development, technology trends, software engineering best practices, and learning from building projects.',
+    keywords: 'Blog, Web Development, Technology, Software Engineering, React, TypeScript, Learning',
+    url: 'https://knirupam.vercel.app/blogs',
+    type: 'website'
+  });
 
     const navigate = useNavigate();
 
