@@ -1,5 +1,5 @@
 
-import bannerImage from "/mountain.jpg";
+import bannerImage from "/mountain.webp";
 
 const BannerSection = () => {
   return (
