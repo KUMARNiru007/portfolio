@@ -13,6 +13,9 @@ import {
   SiNodedotjs,
   SiExpress,
   SiMongodb,
+  SiSupabase,
+  SiResend,
+  SiNextdotjs,
 } from "react-icons/si";
 
 
@@ -167,6 +170,52 @@ export const projects: Project[] = [
     projectDetailsPageSlug: "/projects/swingui",
     isWorking: false,
   },
+  {
+  title: "Tambo Email",
+  description:
+    "A modern full-stack email platform built with Next.js that enables users to send transactional emails using Resend and manage email data securely with Supabase. Designed with a clean and responsive UI using Tailwind CSS.",
+  image: "/projects/tamboemail.png", // add screenshot
+  video: "",
+  link: "https://github.com/KUMARNiru007/tambo-email",
+  technologies: [
+    {
+      name: "Next.js",
+      icon: <SiNextdotjs />,
+      color: "text-neutral-900 dark:text-neutral-100",
+    },
+    {
+        name: "Vercel",
+        icon: <SiVercel />,
+        color: "text-neutral-900 dark:text-neutral-100",
+      },
+    {
+        name: "JavaScript",
+        icon: <SiJavascript/>,
+        color: "text-yellow-600",
+      },
+    {
+      name: "Resend",
+      icon: <SiResend />, // make sure you imported this icon
+      color: "text-black dark:text-white",
+    },
+    {
+      name: "Supabase",
+      icon: <SiSupabase />,
+      color: "text-green-500",
+    },
+    {
+      name: "Tailwind CSS",
+      icon: <SiTailwindcss />,
+      color: "text-sky-400",
+    },
+  ],
+  github: "https://github.com/KUMARNiru007/tambo-email",
+  live: "", 
+  details: true,
+  projectDetailsPageSlug: "/projects/tamboemail",
+  isWorking: true,
+},
+
   {
     title: "CloudBox",
     description:
