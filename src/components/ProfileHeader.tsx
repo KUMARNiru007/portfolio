@@ -74,8 +74,8 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
     github: "https://github.com/KUMARNiru007",
     linkedin: "https://www.linkedin.com/in/kumarnirupam/",
     resume:
-      "https://drive.google.com/file/d/19RyNZzTxqUg6VWMEAmXxaXozPSblTF9R/view?usp=sharing",
-      leetcode : "https://leetcode.com/u/user8723jT/",
+      "https://drive.google.com/file/d/1-APVoAU586ss5jyYiattgAmCPRWpin5M/view?usp=sharing",
+    leetcode : "https://leetcode.com/u/user8723jT/",
   },
 }) => {
 
