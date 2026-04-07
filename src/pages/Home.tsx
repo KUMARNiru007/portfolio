@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import Hero from "../components/Hero";
 import { useSEO } from "../hooks/useSEO";
@@ -19,9 +19,21 @@ import Footer from "../components/Footer";
 import { Certifications } from "@/components/Certifications";
 import { certifications } from "@/config/certifications";
 import Blogs from "@/components/Blog";
+import Loader from "@/components/Loader";
 // import { VisitorCount } from "./components/VisitorCount";
 
 const Home: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Show loader for smooth experience - hide after content is ready
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // 2 second delay for content to render
+
+    return () => clearTimeout(timer);
+  }, []);
+
   useSEO({
     title: 'Kumar Nirupam - Full Stack Software Engineer | Portfolio',
     description: 'Explore Kumar Nirupam\'s portfolio - a skilled full stack software engineer specializing in web development, React, TypeScript, and modern web technologies. View projects, blogs, and professional experience.',
@@ -29,12 +41,17 @@ const Home: React.FC = () => {
     url: 'https://knirupam.vercel.app/',
     type: 'website'
   });
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <TooltipProvider>
 
         <ReactLenis root>
-          <div className="min-h-screen transition-colors duration-300 relative"
+          <div className="min-h-screen transition-colors duration-300 relative fade-in"
             style={{ fontFamily: "var(--font-hk-grotesk)" }}>
               {<Navbar />}
            <div className="relative mx-auto max-w-4xl">

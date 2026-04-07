@@ -1,17 +1,17 @@
-import { useTheme } from '@/hooks/useTheme';
 import './loader.css';
 
 const Loader = () => {
-  const { theme } = useTheme();
+  // Detect theme from document
+  const isDark = typeof window !== 'undefined' 
+    ? document.documentElement.classList.contains('dark')
+    : true;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-opacity-50 z-50 transition-opacity duration-300"
+    <div className="fixed inset-0 flex items-center justify-center z-50"
       style={{
-        backgroundColor: theme === 'dark' ? 'rgba(20, 20, 20, 0.8)' : 'rgba(255, 255, 255, 0.8)',
+        backgroundColor: isDark ? 'rgb(20, 20, 20)' : 'rgb(255, 255, 255)',
       }}>
-      <div className="loader" style={{
-        background: theme === 'dark' ? '#1a1a1a' : '#ffffff',
-      }}></div>
+      <div className="loader"></div>
     </div>
   );
 };

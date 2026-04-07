@@ -1,28 +1,20 @@
 
-import { useEffect } from 'react';
-import { useImageLoad } from '../hooks/useImageLoad';
 import bannerImage from "/mountain.webp";
 
-const BannerSection = ({ onImageLoad }: { onImageLoad?: () => void }) => {
-  const { imageRef, waitForImageLoad } = useImageLoad();
-
-  useEffect(() => {
-    const loadImage = async () => {
-      await waitForImageLoad();
-      onImageLoad?.();
-    };
-    loadImage();
-  }, [waitForImageLoad, onImageLoad]);
-
+const BannerSection = () => {
   return (
-    <div className="w-full relative">
+    <div className="w-full relative fade-in">
       <div className="relative h-auto">
         <img
-          ref={imageRef}
           src={bannerImage}
           alt="Banner"
-          className="w-full h-[200px] sm:h-[270px] object-cover "
-          style={{ minHeight: "100px" }}
+          className="w-full h-[200px] sm:h-[270px] object-cover will-change-transform"
+          style={{ 
+            minHeight: "100px",
+            contain: "layout style paint"
+          }}
+          loading="eager"
+          decoding="async"
         />
 
         <div className="absolute inset-0 flex items-center justify-center px-4">
