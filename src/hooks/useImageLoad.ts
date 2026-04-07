@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 export const useImageLoad = () => {
   const imageRef = useRef<HTMLImageElement>(null);
