@@ -41,6 +41,16 @@
     
     <!-- Preload Important Resources -->
     <link rel="preload" href="/favicon.ico" as="image" />
+    
+    <!-- Prevent theme flicker on page load -->
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.classList.add(theme);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
