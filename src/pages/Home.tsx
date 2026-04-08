@@ -38,17 +38,16 @@ const Home: React.FC = () => {
     title: 'Kumar Nirupam - Full Stack Software Engineer | Portfolio',
     description: 'Explore Kumar Nirupam\'s portfolio - a skilled full stack software engineer specializing in web development, React, TypeScript, and modern web technologies. View projects, blogs, and professional experience.',
     keywords: 'Software Engineer, Full Stack Developer, React, TypeScript, Web Development, Portfolio, Kumar Nirupam',
-    url: 'https://knirupam.vercel.app/',
+    url: 'https://kumarnirupam.dev/',
     type: 'website'
   });
 
-  if (isLoading) {
-    return <Loader />;
-  }
-
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
       <TooltipProvider>
+        {isLoading ? (
+          <Loader />
+        ) : (
 
         <ReactLenis root>
           <div className="min-h-screen transition-colors duration-300 relative fade-in"
@@ -114,6 +113,7 @@ const Home: React.FC = () => {
          
         </div>
         </ReactLenis>
+        )}
       </TooltipProvider>
     </ThemeProvider>
 

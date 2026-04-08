@@ -17,15 +17,15 @@ function BlogPage() {
   useSEO({
     title: 'Blog - Kumar Nirupam | Articles on Web Development & Technology',
     description: 'Read Kumar Nirupam\'s blog articles about web development, technology trends, software engineering best practices, and learning from building projects.',
-    keywords: 'Blog, Web Development, Technology, Software Engineering, React, TypeScript, Learning',
-    url: 'https://knirupam.vercel.app/blogs',
+    keywords: 'Kumar Nirupam, Kumar Nirupam blog, Blog, Web Development, Technology, Software Engineering, React, TypeScript, Learning',
+    url: 'https://kumarnirupam.dev/blogs',
     type: 'website'
   });
 
     const navigate = useNavigate();
 
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
       <TooltipProvider>
 
         <ReactLenis root>

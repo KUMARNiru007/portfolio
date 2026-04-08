@@ -17,8 +17,8 @@ import Footer from '@/components/Footer';
   useSEO({
     title: 'Projects - Kumar Nirupam | Full Stack Developer Portfolio',
     description: 'Explore Kumar Nirupam\'s portfolio projects showcasing expertise in web development, React, TypeScript, and full stack technologies across various domains.',
-    keywords: 'Projects, Portfolio, Web Development, React, TypeScript, Full Stack, Software Engineering',
-    url: 'https://knirupam.vercel.app/projects',
+    keywords: 'Kumar Nirupam, Kumar Nirupam projects, Projects, Portfolio, Web Development, React, TypeScript, Full Stack, Software Engineering',
+    url: 'https://kumarnirupam.dev/projects',
     type: 'website'
   });
   
@@ -27,7 +27,7 @@ import Footer from '@/components/Footer';
 
 
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
       <TooltipProvider>
 
         <ReactLenis root>

@@ -8,7 +8,7 @@ Disallow: /private
 Disallow: *.json
 
 # Sitemap location
-Sitemap: https://knirupam.vercel.app/sitemap.xml
+Sitemap: https://kumarnirupam.dev/sitemap.xml
 
 # Specific rules for major search engines
 User-agent: Googlebot

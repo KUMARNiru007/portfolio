@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- Primary Meta Tags -->
-    <title>Kumar Nirupam - Full Stack Software Engineer | Portfolio</title>
-    <meta name="title" content="Kumar Nirupam - Full Stack Software Engineer | Portfolio" />
+    <title>Kumar Nirupam | Full Stack Software Engineer Portfolio</title>
+    <meta name="title" content="Kumar Nirupam | Full Stack Software Engineer Portfolio" />
     <meta name="description" content="Kumar Nirupam's portfolio - a skilled full stack software engineer specializing in web development, React, JavaScript, and modern web technologies." />
-    <meta name="keywords" content="Software Engineer, Full Stack Developer, React, TypeScript, Web Development, Portfolio" />
+    <meta name="keywords" content="Kumar Nirupam, Kumar Nirupam portfolio, Software Engineer, Full Stack Developer, React, TypeScript, Web Development, Portfolio" />
     <meta name="author" content="Kumar Nirupam" />
+    <meta name="application-name" content="Kumar Nirupam Portfolio" />
     <meta name="theme-color" content="#000000" />
     
     <!-- Open Graph / Facebook Meta Tags -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://knirupam.vercel.app/" />
+    <meta property="og:url" content="https://kumarnirupam.dev/" />
     <meta property="og:title" content="Kumar Nirupam - Full Stack Software Engineer | Portfolio" />
     <meta property="og:description" content="Kumar Nirupam's portfolio - a skilled full stack software engineer specializing in web development, React, JavaScript, and modern web technologies." />
-    <meta property="og:image" content="https://knirupam.vercel.app/profilepic.webp" />
+    <meta property="og:image" content="https://kumarnirupam.dev/profilepic.webp" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="Kumar Nirupam Portfolio" />
@@ -26,18 +27,52 @@
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://knirupam.vercel.app/" />
+    <meta name="twitter:url" content="https://kumarnirupam.dev/" />
     <meta name="twitter:title" content="Kumar Nirupam - Full Stack Software Engineer | Portfolio" />
     <meta name="twitter:description" content="Kumar Nirupam's portfolio - a skilled full stack software engineer specializing in web development, React, JavaScript, and modern web technologies." />
-    <meta name="twitter:image" content="https://knirupam.vercel.app/profilepic.webp" />
+    <meta name="twitter:image" content="https://kumarnirupam.dev/profilepic.webp" />
+    <meta name="twitter:creator" content="@KumarNirupam1" />
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://knirupam.vercel.app/" />
+    <link rel="canonical" href="https://kumarnirupam.dev/" />
     
     <!-- Additional SEO Tags -->
     <meta name="robots" content="index, follow" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="alternate" hreflang="en-us" href="https://knirupam.vercel.app/" />
+    <link rel="alternate" hreflang="en-us" href="https://kumarnirupam.dev/" />
+    <link rel="me" href="https://github.com/KUMARNiru007" />
+    <link rel="me" href="https://www.linkedin.com/in/kumarnirupam/" />
+    <link rel="me" href="https://x.com/KumarNirupam1" />
+
+    <!-- Structured data for search engines -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kumar Nirupam",
+        "url": "https://kumarnirupam.dev/",
+        "image": "https://kumarnirupam.dev/profilepic.webp",
+        "jobTitle": "Full Stack Software Engineer",
+        "sameAs": [
+          "https://github.com/KUMARNiru007",
+          "https://www.linkedin.com/in/kumarnirupam/",
+          "https://x.com/KumarNirupam1",
+          "https://leetcode.com/u/user8723jT/"
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Kumar Nirupam Portfolio",
+        "url": "https://kumarnirupam.dev/",
+        "author": {
+          "@type": "Person",
+          "name": "Kumar Nirupam"
+        }
+      }
+    </script>
     
     <!-- Preload Important Resources -->
     <link rel="preload" href="/favicon.ico" as="image" />
@@ -46,9 +81,12 @@
     <!-- Prevent theme flicker on page load -->
     <script>
       (function() {
-        const savedTheme = localStorage.getItem('portfolio-theme');
+        const savedTheme = localStorage.getItem('vite-ui-theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        const theme =
+          savedTheme === 'light' || savedTheme === 'dark'
+            ? savedTheme
+            : (prefersDark ? 'dark' : 'light');
         document.documentElement.classList.add(theme);
       })();
     </script>
