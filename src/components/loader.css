@@ -1,15 +1,25 @@
 /* HTML: <div class="loader"></div> */
+:root {
+  --loader-shell: var(--background);
+  --loader-dot: var(--foreground);
+}
+
+.dark {
+  --loader-shell: var(--background);
+  --loader-dot: var(--foreground);
+}
+
 .loader {
   height: 50px;
   aspect-ratio: 2;
-  border: 10px solid var(--foreground);
+  border: 10px solid var(--loader-shell);
   box-sizing: border-box;
   background: 
-    radial-gradient(farthest-side,var(--background) 98%,#0000) left/20px 20px,
-    radial-gradient(farthest-side,var(--background) 98%,#0000) left/20px 20px,
-    radial-gradient(farthest-side,var(--background) 98%,#0000) center/20px 20px,
-    radial-gradient(farthest-side,var(--background) 98%,#0000) right/20px 20px,
-    var(--foreground);
+    radial-gradient(farthest-side,var(--loader-dot) 98%,#0000) left/20px 20px,
+    radial-gradient(farthest-side,var(--loader-dot) 98%,#0000) left/20px 20px,
+    radial-gradient(farthest-side,var(--loader-dot) 98%,#0000) center/20px 20px,
+    radial-gradient(farthest-side,var(--loader-dot) 98%,#0000) right/20px 20px,
+    var(--loader-shell);
   background-repeat: no-repeat;
   filter: blur(4px) contrast(10);
   animation: l14 1s infinite;

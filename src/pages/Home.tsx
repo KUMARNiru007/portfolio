@@ -22,14 +22,35 @@ import Blogs from "@/components/Blog";
 import Loader from "@/components/Loader";
 // import { VisitorCount } from "./components/VisitorCount";
 
+const LOADER_STORAGE_KEY = "portfolio-loader-last-shown-at";
+const LOADER_MAX_AGE_MS = 1000 * 60 * 60 * 24 * 7; // 7 days
+const LOADER_DURATION_MS = 800;
+
 const Home: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    // Show loader for smooth experience - hide after content is ready
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) {
+      return;
+    }
+
+    const now = Date.now();
+    const lastShownAtValue = localStorage.getItem(LOADER_STORAGE_KEY);
+    const lastShownAt = lastShownAtValue ? Number(lastShownAtValue) : 0;
+    const hasRecentLoader = Number.isFinite(lastShownAt) && now - lastShownAt < LOADER_MAX_AGE_MS;
+
+    if (hasRecentLoader) {
+      return;
+    }
+
+    setIsLoading(true);
+
+    // Keep loader brief so it feels intentional without delaying repeat visitors.
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000); // 2 second delay for content to render
+      localStorage.setItem(LOADER_STORAGE_KEY, String(Date.now()));
+    }, LOADER_DURATION_MS);
 
     return () => clearTimeout(timer);
   }, []);
