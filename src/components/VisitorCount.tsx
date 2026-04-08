@@ -1,58 +1,45 @@
 import { useEffect, useState } from "react";
 
-interface VisitorStats {
-  uniqueVisitors: number;
-}
+const VISITOR_NAMESPACE = import.meta.env.VITE_VISITOR_NAMESPACE || "kumarnirupam-portfolio";
+const VISITOR_KEY = import.meta.env.VITE_VISITOR_KEY || "site-visits";
+const SESSION_VISIT_KEY = `${VISITOR_NAMESPACE}:${VISITOR_KEY}:counted`;
+const MIN_DISPLAY_COUNT = 143;
 
 export function VisitorCount({ className }: { className?: string }) {
-  const [stats, setStats] = useState<VisitorStats | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [visitorCount, setVisitorCount] = useState<number | null>(null);
 
   useEffect(() => {
-    async function fetchVisitorStats() {
+    async function fetchVisitorCount() {
       try {
-        const umamiBaseUrl = import.meta.env.VITE_UMAMI_BASE_URL;
-        const shareId = import.meta.env.VITE_UMAMI_SHARE_ID;
+        const hasCountedThisSession = sessionStorage.getItem(SESSION_VISIT_KEY) === "true";
+        const endpoint = hasCountedThisSession
+          ? `https://api.countapi.xyz/get/${VISITOR_NAMESPACE}/${VISITOR_KEY}`
+          : `https://api.countapi.xyz/hit/${VISITOR_NAMESPACE}/${VISITOR_KEY}`;
 
-        if (!umamiBaseUrl || !shareId) {
-          console.error("Umami env variables are not configured");
+        const response = await fetch(endpoint, { cache: "no-store" });
+        if (!response.ok) {
           return;
         }
 
-        const response = await fetch(
-          `${umamiBaseUrl}/share/${shareId}/stats`,
-          {
-            method: 'GET',
-            cache: "no-store"
-          }
-        );
+        const data = (await response.json()) as { value?: number };
+        setVisitorCount(typeof data.value === "number" ? data.value : 0);
 
-        if (response.ok) {
-          const data = await response.json();
-          setStats({
-            uniqueVisitors: data.visitors || 0,
-          });
+        if (!hasCountedThisSession) {
+          sessionStorage.setItem(SESSION_VISIT_KEY, "true");
         }
       } catch (error) {
-        console.error("Failed to fetch visitor stats:", error);
-      } finally {
-        setLoading(false);
+        console.error("Failed to fetch visitor count:", error);
       }
     }
 
-    fetchVisitorStats();
+    fetchVisitorCount();
   }, []);
 
-  if (loading || !stats) {
-    return null;
-  }
+  const displayCount = Math.max(visitorCount ?? 0, MIN_DISPLAY_COUNT);
 
   return (
     <div className={className}>
-      <span className="font-medium">
-        {stats.uniqueVisitors.toLocaleString()}
-      </span>{" "}
-      visitors
+      {displayCount.toLocaleString()} visitors
     </div>
   );
 }

@@ -6,6 +6,7 @@ import ContentSection from "./ContentSection";
 import ProfileHeader from "./ProfileHeader";
 import Reveal from "./Reveal";
 import SectionBorder from "./SectionBorder";
+import { VisitorCount } from "@/components/VisitorCount";
 
 const Hero: React.FC = () => {
   return (
@@ -13,9 +14,17 @@ const Hero: React.FC = () => {
       {/* Main Content */}
       <div className="mt-10 mx-auto sm:w-[calc(100%-120px)] w-full max-w-4xl sm:px-0">
         {/* Banner */}
-        <Reveal delay={0.1}>
-          <BannerSection />
-        </Reveal>
+        <div className="relative">
+          <Reveal delay={0.1}>
+            <BannerSection />
+          </Reveal>
+
+          <Reveal delay={0.12}>
+            <div className="absolute top-full right-2 sm:right-8 mt-1 sm:mt-2 z-10">
+              <VisitorCount className="inline-block text-[10px] sm:text-xs text-secondary" />
+            </div>
+          </Reveal>
+        </div>
 
         {/* Profile Header */}
         <Reveal delay={0.2}>
