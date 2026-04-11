@@ -2,6 +2,12 @@ import {type BlogPost } from '../types/blog'
 
 export const blogs: BlogPost[] = [
   {
+    id: '00',
+    title: 'How I Built a Secure and Scalable 3-Tier Architecture on AWS',
+    readTime: '12 min read',
+    externalUrl: 'https://medium.com/@kumar.nirupam24/how-i-built-a-secure-and-scalable-3-tier-architecture-on-aws-a-step-by-step-guide-385cc1c83ed0'
+  },
+  {
     id: '01',
     title: 'Web Jargons for Dummies',
     readTime: '7 min read',
