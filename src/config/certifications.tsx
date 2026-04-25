@@ -13,8 +13,16 @@ export const certifications: Certification[] = [
     id: "2",
     title: "Certified Full-Stack Developer",
     issuer: "Chai Aur Code",
-    date: "22.08.2025",
+    date: "22.8.2025",
     logoUrl: "/logos/chaicode.webp",
     credentialUrl: "https://courses.chaicode.com/learn/certificate/11184202-214298",
+  },
+  {
+    id: "3",
+    title: "AWS Academy Graduate - Cloud Architecting",
+    issuer: "Amazon Web Service",
+    date: "20.4.2026",
+    logoUrl: "/logos/aws.jpg", 
+    credentialUrl: "https://www.credly.com/badges/d6b36956-8d78-4b8b-bc48-255c37dcd582", 
   },
 ];
