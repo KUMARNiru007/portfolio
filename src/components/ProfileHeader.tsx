@@ -11,7 +11,7 @@ import {
   TooltipTrigger,
   TooltipContent,
 } from "../components/ui/tooltip";
-import { SiLeetcode } from "react-icons/si";
+import { SiLeetcode, SiMedium } from "react-icons/si";
 import { RotatingText } from "@/components/rotating-text";
 
 interface ProfileHeaderProps {
@@ -25,6 +25,7 @@ interface ProfileHeaderProps {
     resume?: string;
     github?: string;
     linkedin?: string;
+    medium?: string;
   };
 }
 
@@ -73,6 +74,7 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
     twitter: "https://x.com/KumarNirupam1",
     github: "https://github.com/KUMARNiru007",
     linkedin: "https://www.linkedin.com/in/kumarnirupam/",
+    medium: "https://medium.com/@kumar.nirupam24",
     resume:
       "https://drive.google.com/file/d/1-APVoAU586ss5jyYiattgAmCPRWpin5M/view?usp=sharing",
     leetcode : "https://leetcode.com/u/user8723jT/",
@@ -82,9 +84,9 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({
   const socials = [
     { href: socialLinks.github, label: "GitHub", icon: <FaGithub /> },
     { href: socialLinks.twitter, label: "Twitter", icon: <FaXTwitter /> },
+    { href: socialLinks.medium, label: "Medium", icon: <SiMedium /> },
     { href: socialLinks.leetcode, label: "Leetcode", icon: <SiLeetcode /> },
-    { href: socialLinks.linkedin, label: "LinkedIn", icon: <FaLinkedin /> },
-    { href: socialLinks.resume, label: "Resume", icon: <FaPaperclip /> },
+    { href: socialLinks.linkedin, label: "LinkedIn", icon: <FaLinkedin /> }
   ];
 
   return (
