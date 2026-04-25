@@ -8,7 +8,8 @@ import { Button } from "../components/ui/button";
 import Reveal from "./Reveal.tsx";
 
 const Blogs: React.FC = () => {
-  const featuredBlogs = blogs.slice(0, 4);
+  const latestFirstBlogs = [...blogs].reverse();
+  const featuredBlogs = latestFirstBlogs.slice(0, 4);
 
   return (
       

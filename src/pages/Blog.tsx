@@ -23,6 +23,7 @@ function BlogPage() {
   });
 
     const navigate = useNavigate();
+    const latestFirstBlogs = [...blogs].reverse();
 
   return (
     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
@@ -68,16 +69,16 @@ function BlogPage() {
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-semibold">
               All Blogs
-              {blogs.length > 0 && (
+              {latestFirstBlogs.length > 0 && (
                 <span className="text-muted-foreground ml-2 text-sm font-normal">
-                  ({blogs.length}{' '}
-                  {blogs.length === 1 ? 'project' : 'blogs'})
+                  ({latestFirstBlogs.length}{' '}
+                  {latestFirstBlogs.length === 1 ? 'project' : 'blogs'})
                 </span>
               )}
             </h2>
           </div>
 
-          <BlogList blogs={blogs} />
+          <BlogList blogs={latestFirstBlogs} />
         </div>
       </div>
     </Container>
